@@ -1,4 +1,11 @@
 local plugins = {
+  {
+    "neovim/nvim-lspconfig",
+     config = function()
+        require "plugins.configs.lspconfig"
+        require "custom.configs.lspconfig"
+     end,
+  },
   {"mhinz/vim-startify", lazy=false,},
   {"dhruvasagar/vim-table-mode", lazy=false,},
   {
