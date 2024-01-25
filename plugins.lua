@@ -19,6 +19,7 @@ local plugins = {
                 work = "~/Dropbox/simplenotes/work",
                 personal = "~/Dropbox/simplenotes/personal",
               },
+              open_last_workspace = true, 
             },
           },
         },
