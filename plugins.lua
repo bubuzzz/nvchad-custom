@@ -103,6 +103,19 @@ local plugins = {
       }
     end,
   },
+  {
+    "michaelb/sniprun", lazy = false,
+    branch = "master",
+
+    build = "sh install.sh",
+    config = function()
+      require("sniprun").setup({
+        display = {
+          "TerminalWithCode", --# display results and code history in a vertical split
+        },
+      })
+    end,
+  },
 }
 
 return plugins
