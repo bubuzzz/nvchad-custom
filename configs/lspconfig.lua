@@ -5,15 +5,6 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
--- for _, lsp in ipairs(servers) do
---   lspconfig[lsp].setup {
---     on_attach = on_attach,
---     capabilities = capabilities,
---   }
--- end
-
--- Without the loop, you would have to manually set up each LSP 
--- 
 
 lspconfig.lua_ls.setup {
   on_init = function(client)
@@ -63,3 +54,20 @@ lspconfig.pyright.setup {
     }
   }
 }
+
+ lspconfig.gopls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    root_dir = lspconfig.util.root_pattern(".git", "go.mod"),
+    flags = {
+       debounce_text_changes = 150,
+    },
+    settings = {
+       gopls = {
+          gofumpt = true,
+          experimentalPostfixCompletions = true,
+          staticcheck = true,
+          usePlaceholders = true,
+       },
+    },
+ }

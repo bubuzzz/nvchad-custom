@@ -6,6 +6,9 @@ local plugins = {
         -- defaults 
         "vim",
         "lua",
+        "gomod",
+        "gowork",
+        "gosum",
 
         -- web dev 
         "html",
