@@ -3,22 +3,18 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        -- defaults 
         "vim",
         "lua",
         "gomod",
         "gowork",
         "gosum",
-
-        -- web dev 
         "html",
         "css",
         "javascript",
         "typescript",
         "tsx",
         "json",
-
-       -- low level
+        "terraform",
         "c",
         "zig"
       },
@@ -31,6 +27,7 @@ local plugins = {
         require "custom.configs.lspconfig"
      end,
   },
+  {"github/copilot.vim", lazy=false,},
   {"mhinz/vim-startify", lazy=false,},
   {"dhruvasagar/vim-table-mode", lazy=false,},
   {
