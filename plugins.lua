@@ -5,6 +5,7 @@ local plugins = {
       ensure_installed = {
         "vim",
         "lua",
+        "vimdoc",
         "gomod",
         "gowork",
         "gosum",
@@ -18,7 +19,7 @@ local plugins = {
         "c",
         "zig"
       },
-    },
+    },    
   },
   {
     "neovim/nvim-lspconfig",
@@ -122,6 +123,14 @@ local plugins = {
       ft = { "markdown" },
       build = function() vim.fn["mkdp#util#install"]() end,
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      view = {
+        adaptive_size = true
+      }
+    }
+  }
 }
 
 
