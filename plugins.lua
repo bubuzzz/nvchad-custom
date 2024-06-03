@@ -19,7 +19,7 @@ local plugins = {
         "c",
         "zig"
       },
-    },    
+    },
   },
   {
     "neovim/nvim-lspconfig",
