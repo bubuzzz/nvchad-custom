@@ -17,7 +17,10 @@ local plugins = {
         "json",
         "terraform",
         "c",
-        "zig"
+        "zig",
+        "http",
+        "xml",
+        "graphql"
       },
     },
   },
@@ -31,22 +34,6 @@ local plugins = {
   {"github/copilot.vim", lazy=false,},
   {"mhinz/vim-startify", lazy=false,},
   {"dhruvasagar/vim-table-mode", lazy=false,},
-  {
-    "vhyrro/luarocks.nvim",
-    priority = 1000,
-    config = true,
-    opts = {
-      rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" }
-    }
-  },
-  {
-    "rest-nvim/rest.nvim",
-    ft = "http",
-    dependencies = { "luarocks.nvim" },
-    config = function()
-      require("rest-nvim").setup()
-    end,
-  },
   {
     "michaelb/sniprun", lazy = false,
     branch = "master",
